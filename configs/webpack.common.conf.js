@@ -148,7 +148,7 @@ const webConfig = {
       {
         test: /\.vue(\?[^?]+)?$/,
         use: [{
-          loader: 'mpvue-loader',
+          loader: 'vue-loader',
           options: Object.assign(vueLoaderConfig({useVue: true, usePostCSS: false}), {
             /**
              * important! should use postTransformNode to add $processStyle for
