@@ -77,6 +77,10 @@
 </template>
 
 <script>
+
+// import { getEntryUrl } from './common/utils/navigator'
+const navigator = weex.requireModule('navigator')
+
 export default {
   name: 'App',
   components: {
@@ -96,13 +100,25 @@ export default {
       WXCODE: '',
       showStar: false
     }
+  },
+  methods: {
+    selectImage: function (sourceType) {
+      let cameraType = true
+      if (sourceType.indexOf('camera') > -1 && cameraType) {
+        navigator.push({
+          url: '../test',
+          // url: getEntryUrl('test'),
+          animated: 'true'
+        })
+      }
+    }
   }
 }
 </script>
 
 <style lang="postcss">
 @import "./common/static/less/base.less";
-/* @import "./common/static/less/common.less"; */
+@import "./common/static/less/common.less";
 .box{
   height: 100%;
 }

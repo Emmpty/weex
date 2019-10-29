@@ -145,6 +145,7 @@ const webConfig = {
         }],
         exclude: config.excludeModuleReg
       },
+      { test: /.less$/, loader: "style-loader!css-loader!less-loader", },
       {
         test: /\.vue(\?[^?]+)?$/,
         use: [{
