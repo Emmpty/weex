@@ -16,6 +16,10 @@ module.exports = (options) => {
       usePostCSS: options && options.usePostCSS
     }),
     cssSourceMap: sourceMapEnabled,
-    cacheBusting: config.dev.cacheBusting
+    cacheBusting: config.dev.cacheBusting,
+    lang: {
+      less: ['less-loader']   //如果是sass就将less改成sass
+   }
+
   }
 }

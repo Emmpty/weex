@@ -116,7 +116,7 @@ export default {
 }
 </script>
 
-<style lang="postcss">
+<style  lang="less" scoped>
 @import "./common/static/less/base.less";
 @import "./common/static/less/common.less";
 .box{
@@ -186,7 +186,6 @@ export default {
   top: 50wx;
   border-right: 0;
   right: 0;
-  color: #fff;
   text-align: center;
 }
 .child-tag{
@@ -275,11 +274,17 @@ export default {
   right:0;
   top: 54%;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   .explain-text {
     font-size: 30wx;
     color: rgb(141, 150, 159);
-    width:112wx;
+    // width:112wx;
+    display: flex;
+    flex-direction: row;
     padding:15wx;
+    align-items: center;
+    justify-content: center;
     position: relative;
   }
   .youjiantou_box{
